@@ -1,4 +1,4 @@
-# 1. Write a function named sum_tothat accepts a single integer, n, and returns the sum of the integers from 1 to n.
+# 1. Write a function named sum_to that accepts a single integer, n, and returns the sum of the integers from 1 to n.
 
 # num = int(input( "enter a integer: " ))
 # sum_to=num
@@ -12,20 +12,20 @@
 
 # ------------------------
 
-# 2. Write a function named largestthat takes a list of numbers as an argument and returns the largest number in that list.
+# 2. Write a function named largest that takes a list of numbers as an argument and returns the largest number in that list.
 
-def largestthat( list ):
+def largestNum( list ):
     largest = list[ 0 ]
     for number in list:
         if number > largest:
             largest = number
     return largest
-print(largestthat([10, 4, 2, 231, 91, 54]))
+print(largestNum([10, 4, 2, 231, 91, 54]))
 
-# largestthat([1, 2, 3, 4, 0])  # returns 4
-# largestthat([10, 4, 2, 231, 91, 54])  # returns 231
+# largestNum([1, 2, 3, 4, 0])  # returns 4
+# largestNum([10, 4, 2, 231, 91, 54])  # returns 231
 
-# 3. Write a function named occurancesthat takes two string arguments as input and counts the number of occurances of the second string inside the first string.
+# 3. Write a function named occurances that takes two string arguments as input and counts the number of occurances of the second string inside the first string.
 
 # Only gave me one letter
 
@@ -95,7 +95,20 @@ for count in range(len(stringA) - len(stringB) + 1):
         occurence += 1
 print(occurence)
 
+#---------------
 
+# 4. Write a function named product that takes an arbitrary number of numbers, multiplies them all together, and returns the product.
+
+def product(*args):
+    total = 1
+    for num in args:
+        total *= num
+    return total
+print(product(4, 0.5, 5))
+
+# product(-1, 4) # returns -4
+# product(2, 5, 5) # returns 50
+# product(4, 0.5, 5) # returns 10.0
 
 
 
